@@ -26,7 +26,6 @@ ul {
   list-style: none;
 }
 .header {
-  /* border-bottom: 1px solid var(--subtle-bg-accent-color); */
   outline: 1px solid var(--subtle-bg-accent-color);
   outline-offset: -1px;
 }
@@ -356,13 +355,50 @@ ul {
 .footer-media {
   gap: 16px;
 }
-.social-media-title {
+.footer-title,
+.btn-subscribe {
   color: var(--header-title-color);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.32px;
   margin-bottom: 16px;
+}
+.btn-subscribe {
+  display: inline-flex;
+  max-width: 165px;
+  height: 40px;
+  background-color: var(--primary-brand-color);
+  border-radius: 4px;
+  border: none;
+  padding: 8px 24px;
+  margin-left: 24px;
+  gap: 16px;
+  cursor: pointer;
+}
+.btn-subscribe:hover,
+.btn-subscribe:focus {
+  background-color: var(--pressed-state-color);
+  transition: background-color var(--tr-time) var(--tr-timing-function);
+}
+.form-footer {
+  margin-left: 80px;
+}
+.subscribe-input {
+  color: var(--header-title-color);
+  padding: 0 16px;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.48px;
+  width: 264px;
+  height: 40px;
+  background-color: var(--headings-color);
+  border: 1px solid var(--header-title-color);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.subscribe-input::placeholder {
+  color: var(--header-title-color);
 }
 .team-media {
   display: flex;
@@ -499,6 +535,10 @@ ul {
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
+.btn-close:active {
+  background: var(--pressed-state-color);
+  fill: var(--header-title-color);
+}
 .is-hidden {
   opacity: 0;
   visibility: visible;
@@ -506,4 +546,121 @@ ul {
 }
 .is-hidden .popup {
   scale: 0;
+}
+.form-group {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.contacts-form {
+  color: var(--headings-color);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+  margin-top: 72px;
+  margin-bottom: 16px;
+}
+.label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: var(--customers-color);
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.48px;
+}
+.input-contacts {
+  margin-top: 4px;
+  width: 360px;
+  height: 40px;
+  padding-left: 38px;
+  border: 1px solid var(--dark-bg-color);
+  border-radius: 4px;
+}
+.textarea {
+  margin-top: 4px;
+  resize: none;
+  width: 360px;
+  height: 120px;
+  padding: 8px 16px;
+}
+.textarea::placeholder {
+  color: var(--customers-color);
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.btn-form-contacts {
+  color: var(--header-title-color);
+  background-color: var(--primary-brand-color);
+  width: 169px;
+  height: 56px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 16px 32px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+  border: none;
+}
+.btn-form-contacts:hover,
+.btn-form-contacts:focus {
+  background-color: var(--pressed-state-color);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: background-color var(--tr-time) var(--tr-timing-function),
+    box-shadow var(--tr-time) var(--tr-timing-function);
+}
+.icon-form {
+  position: absolute;
+  inset: 32px 329px 14px 19px;
+}
+.input-contacts:hover,
+.input-contacts:focus-within,
+.input-contacts:active,
+.textarea:hover,
+.textarea:focus-within,
+.textarea:active {
+  outline: none;
+  border: 1px solid var(--primary-brand-color);
+}
+.label:focus-within,
+.label:active,
+.label:hover {
+  fill: var(--primary-brand-color);
+}
+.checkbox {
+  appearance: none;
+}
+.checkbox:checked + .fake-checkbox {
+  fill: var(--light-mode-bg-color);
+  background-color: var(--pressed-state-color);
+  border: 1px solid var(--pressed-state-color);
+}
+.fake-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  fill: none;
+  border: 1px solid var(--dark-bg-color);
+}
+.checkbox-text {
+  width: 360px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.48px;
+  color: var(--customers-color);
+}
+.privacy-policy {
+  color: var(--primary-brand-color);
+  line-height: 16px;
+}
+.checkbox {
+  display: flex;
+  justify-content: start;
 }

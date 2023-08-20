@@ -60,9 +60,77 @@
             <div class="popup">
               <button class="btn-close" data-modal-close type="button">
                 <svg class="close">
-                  <use href="./images/close.svg#close"></use>
+                  <use href="./images/icons.svg#icon-close"></use>
                 </svg>
               </button>
+              <form class="form-contacts">
+                <div class="form-group" role="group" aria-labelledby="contacts-form">
+                  <p id="contacts-form" class="contacts-form">
+                    Leave your contacts and we will call you back
+                  </p>
+                  <div class="input-group" role="group">
+                    <label class="label">
+                      <svg class="icon-form" width="12" height="12">
+                        <use href="./images/icons.svg#icon-person"></use>
+                      </svg>
+                      Name
+                      <input
+                        class="input-contacts"
+                        type="text"
+                        name="user-name"
+                        id="user-name"
+                        required
+                      />
+                    </label>
+                    <label class="label">
+                      <svg class="icon-form" width="13" height="13">
+                        <use href="./images/icons.svg#icon-tel"></use>
+                      </svg>
+                      Phone
+                      <input
+                        class="input-contacts"
+                        type="tel"
+                        name="user-tel"
+                        id="user-tel"
+                        required
+                      />
+                    </label>
+                    <label class="label">
+                      <svg class="icon-form" width="15" height="12">
+                        <use href="./images/icons.svg#icon-mail"></use>
+                      </svg>
+                      Email
+                      <input
+                        class="input-contacts"
+                        type="email"
+                        name="user-email"
+                        id="user-email"
+                        required
+                      />
+                    </label>
+                    <label class="label">
+                      Comment
+                      <textarea
+                        class="textarea"
+                        name="comment"
+                        id="comment"
+                        placeholder="Text Input"
+                      ></textarea>
+                    </label>
+                  </div>
+                  <label class="checkbox-text">
+                    <input class="checkbox" type="checkbox" name="checkbox" id="checkbox" />
+                    <span class="fake-checkbox"
+                      ><svg width="10" height="8">
+                        <use href="./images/icons.svg#icon-ok"></use>
+                      </svg>
+                    </span>
+                    I accept the terms and conditions of the
+                    <a class="privacy-policy" href="#">Privacy Policy</a>
+                  </label>
+                  <button class="btn-form-contacts" type="submit">Send</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -396,7 +464,7 @@
           </p>
         </div>
         <div class="bottom-right-block">
-          <p class="social-media-title">Social media</p>
+          <p class="footer-title">Social media</p>
           <ul class="footer-media">
             <li>
               <a class="footer-icon" href="#">
@@ -427,6 +495,25 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="form-footer">
+          <form class="form-subscribe">
+            <p class="footer-title">Subscribe</p>
+            <label
+              ><input
+                class="subscribe-input"
+                type="email"
+                name="user-email-subscribe"
+                id="user-email-subscribe"
+                placeholder="E-mail"
+            /></label>
+            <button class="btn-subscribe" type="submit">
+              Subscribe
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#icon-subscribe"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
